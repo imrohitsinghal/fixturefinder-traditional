@@ -93,7 +93,7 @@
 .jumbotron {
   text-align: center;
   color: white;
-  background-image: url("../html/resources/stadium-background.jpg");
+  background-image: url("../resources/stadium-background.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
