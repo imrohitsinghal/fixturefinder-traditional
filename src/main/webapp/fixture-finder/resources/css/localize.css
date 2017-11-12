@@ -1,0 +1,18 @@
+.localize {
+   float: right;
+   margin-top: -25px;
+}
+
+.localize input[type="radio"]{
+    display:none;
+}
+
+.localize input[type="radio"]:checked + label > div {
+    border: 1px solid red;
+    height: 12px;
+    width: 18px;
+}
+
+.localize .flag {
+    margin: 0px;
+}

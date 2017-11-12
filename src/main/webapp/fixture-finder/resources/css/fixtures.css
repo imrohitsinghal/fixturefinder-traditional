@@ -1,0 +1,99 @@
+.main {
+  width:95%
+}
+
+.fixtures {
+  border: 1px;
+  margin-left: 1px;
+  width:95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fixtures h3 {
+  text-align: center;
+}
+
+.fixtures ul {
+  list-style-type: none;
+}
+
+.fixtures th  {
+  text-align: center;
+  background-color: #E5E4E2;
+}
+
+.fixtures td {
+  text-align: center;
+}
+
+.fixtures .competition {
+  width: 30%;
+  text-align: left;
+}
+
+.fixtures .kickOffDate {
+  width: 10%;
+}
+
+.fixtures .team {
+  width: 25%;
+}
+
+.fixtures .score {
+  width: 10%;
+}
+
+.fixtures .add {
+  width: 10%;
+}
+
+.fixtures .info {
+  text-align: center;
+  font-size: 2em;
+  width:30%;
+  margin: 10px auto 10px auto;
+}
+
+.fixtures .info .date {
+  font-weight: bold;
+}
+
+.fixtures .info .numberOfFixtures {
+  font-size: 0.5em;
+  display:block;
+}
+
+.fixtures .spinner{
+  display: none;
+}
+
+.fixtures .dateSelectNav {
+  text-align: center;
+  margin: 10px;
+}
+
+.fixtures .dateSelect {
+  margin: 0px 5px 5px 5px;
+  width: 17.99%;
+}
+
+.nextCoupon .input-sm {
+  font-size: 10px;
+}
+
+.nextCoupon .fixture {
+  width: 70%;
+}
+
+.nextCoupon .odds {
+  width: 20%;
+}
+
+.jumbotron {
+  text-align: center;
+  color: white;
+  background-image: url("../html/resources/stadium-background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
