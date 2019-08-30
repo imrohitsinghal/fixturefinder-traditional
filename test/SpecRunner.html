@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner v2.2.0</title>
+
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.2.0/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-2.2.0/jasmine.css">
+
+    <script src="lib/jasmine-2.2.0/jasmine.js"></script>
+    <script src="lib/jasmine-2.2.0/jasmine-html.js"></script>
+    <script src="lib/jasmine-2.2.0/boot.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="lib/jasmin-jquery.js"></script>
+
+    <!-- include source files here... -->
+    <script>
+        var FixtureFinder = {};
+    </script>
+    <script src="../js/lib/moment.min.js"></script>
+    <script src="../js/fixture-parser.js"></script>
+    <script src="../js/fixture-date.js"></script>
+    <script src="../js/fixture-filter.js"></script>
+    <script src="../js/localize.js"></script>
+
+    <!-- include spec files here... -->
+    <script src="resources/testFixtureData.js"></script>
+    <script src="spec/fixture-parser-spec.js"></script>
+    <script src="spec/fixture-date-spec.js"></script>
+    <script src="spec/team-filter-spec.js"></script>
+    <script src="spec/country-filter-spec.js"></script>
+    <script src="spec/localize-spec.js"></script>
+
+</head>
+
+<body>
+    <div class="container main" style="display:none">
+        <div class="row">
+            <div class="jumbotron">
+                <h1>Fixture Findr (Pairing A)</h1>
+            </div>
+            <div class="localize">
+                <input type="radio" id="en_loc" name="localize" value="en" checked>
+                <label for="en_loc">
+                    <div class="flag flag-USA"></div>
+                </label>
+
+                <input type="radio" id="de_loc" name="localize" value="de">
+                <label for="de_loc">
+                    <div class="flag flag-Germany"></div>
+                </label>
+
+                <input type="radio" id="et_loc" name="localize" value="et">
+                <label for="et_loc">
+                   <div class="flag flag-Estonia"></div>
+                </label>
+            </div>
+            <nav class="navbar navbar-default">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group filter">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">
+                            All Countries
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="competitions dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li>
+                                <input type="radio" id="All" name="competition" value="0" checked>
+                                <label for="All"><span class="flag flag-All"></span>
+                                    <strong><span class="all-txt">All Countries</span></strong>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="England" name="competition" value="1">
+                                <label for="England"><span class="flag flag-England"></span>
+                                    <strong><span class="en-txt">England</span></strong>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="Germany" name="competition" value="2">
+                                <label for="Germany"><span class="flag flag-Germany"></span>
+                                    <strong><span class="de-txt">Germany</span></strong>
+                                </label>
+                            </li>
+                        </ul>
+                        <input type="text" class="form-control team-filter" placeholder="Filter Team">
+                    </div>
+                </form>
+            </nav>
+
+            <section class="fixtures">
+                <div class="dateSelectNav">
+                    <button type="button" class="btn btn-primary btn dateSelect" data-offset="-7">Previous Week</button>
+                    <button type="button" class="btn btn-info btn dateSelect" data-offset="-1">Previous Day</button>
+                    <button type="button" class="btn btn-success btn dateSelect" data-offset="0">Today</button>
+                    <button type="button" class="btn btn-info btn dateSelect" data-offset="1">Next Day</button>
+                    <button type="button" class="btn btn-primary btn dateSelect" data-offset="7">Next Week</button>
+                </div>
+
+                <div class="info">
+                    <span class="date"></span>
+                    <span class="numberOfFixtures"></span>
+                    <img src="./resources/football_spinner.gif" class="spinner" />
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-condensed table-striped table-hover table-bordered sortable">
+                        <tr class="headers">
+                            <th class="competition">
+                                <span class="txt">Competition</span>
+                            </th>
+                            <th class="kickOffDate sorttable_sorted">
+                                <span class="txt">Kick-Off</span>
+                                <span id="sorttable_sortfwdind">&nbsp;▾</span>
+                            </th>
+                            <th class="home team">
+                                <span class="txt">Home Team</span>
+                            </th>
+                            <th class="score">
+                                <span class="txt">Score</span>
+                                <th class="away team">
+                                    <span class="txt">Away Team</span>
+                                </th>
+                        </tr>
+                        <tr class="spinner">
+                            <td colspan="5">
+                                <img src="./resources/football_spinner.gif" class="spinner" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js">
+    </script>
+    <script src="./js/lib/dropdowns-enhancement.js">
+    </script>
+    <script src="./js/lib/sorttable.js">
+    </script>
+    <script src="./js/lib/moment.min.js">
+    </script>
+    <script src="./js/initializer.js">
+    </script>
+    <script src="./js/fixture-parser.js">
+    </script>
+    <script src="./js/fixture-retriever.js">
+    </script>
+    <script src="./js/fixture-date.js">
+    </script>
+    <script src="./js/fixture-filter.js">
+    </script>
+    <script src="./js/localize.js">
+    </script>
+
+    <script>
+        $(document).ready(FixtureFinder.initializer.init());
+    </script>
+
+</body>
+</html>
