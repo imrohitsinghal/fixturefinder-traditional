@@ -7,7 +7,7 @@ var localizer = function (){
                     firstNavBtn: "Vorige Woche",
                     secondNavBtn: "Vorheriger Tag",
                     thirdNavBtn: "Heute",
-                    fourthNavBtn: "Nächster Tag",
+                    fourthNavBtn: "Nächster",
                     fifthNavBtn: "Naechste Woche",
                     competition: "Wettbewerb",
                     kickOffDate: "Anstoß",

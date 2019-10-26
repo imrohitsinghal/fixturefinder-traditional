@@ -22,14 +22,17 @@
     <div class="container main">
         <div class="row">
             <div class="jumbotron">
-                <h1>Fixture Finder (Traditional CAST 2018)</h1>
+                <h1>Fixture Finder ATD 2019</h1>
             </div>
             <div class="localize">
+                <input type="radio" id="in_loc" name="localize" value="in">
+                <label for="in_loc">
+                    <div class="flag flag-India"></div>
+                </label>
                 <input type="radio" id="en_loc" name="localize" value="en" checked>
                 <label for="en_loc">
                     <div class="flag flag-USA"></div>
                 </label>
-
                 <input type="radio" id="de_loc" name="localize" value="de">
                 <label for="de_loc">
                     <div class="flag flag-Germany"></div>
@@ -68,15 +71,24 @@
                                     <strong><span class="et-txt">Estonia</span></strong>
                                 </label>
                             </li>
+                            <li>
+                                <input type="radio" id="India" name="competition" value="4">
+                                <label for="India"><span class="flag flag-Estonia"></span>
+                                    <strong><span class="et-txt">India</span></strong>
+                                </label>
+                            </li>
                         </ul>
                         <input type="text" class="form-control team-filter" placeholder="Filter Team">
-                    </div>
+                        <div class="navbar-form  btn-group">
+                            Choose Date: <input type="date" class="form-control date-picker" id="startDate">
+                        </div>
+                        </div>
                 </form>
             </nav>
 
             <section class="fixtures">
                 <div class="dateSelectNav">
-                    <button type="button" class="btn btn-primary btn dateSelect" data-offset="-7">Previous Week</button>
+                    <button type="button" class="btn btn-primary btn dateSelect" data-offset="-8">Previous Week</button>
                     <button type="button" class="btn btn-info btn dateSelect" data-offset="-1">Previous Day</button>
                     <button type="button" class="btn btn-success btn dateSelect" data-offset="0">Today</button>
                     <button type="button" class="btn btn-info btn dateSelect" data-offset="1">Next Day</button>
@@ -119,6 +131,10 @@
             </section>
         </div>
     </div>
+
+    <footer>
+        <p>© v1.0.0</p>
+    </footer>
 
     <script src="http://code.jquery.com/jquery-1.11.2.min.js">
     </script>

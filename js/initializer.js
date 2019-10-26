@@ -9,7 +9,9 @@ FixtureFinder.initializer = function() {
     var teamFilterInput = $('.navbar .team-filter');
     var countryFilterSelector = '.competitions input[name=competition]';
     var localizeButtons = '.localize input[type="radio"]';
-
+    var datePicker = $('.navbar .date-picker');
+    
+    
     var getFixturesByDate = function(date) {
         FixtureFinder.FixtureRetriever.getFixturesByDate(
             date || moment().format(dateFormat),
@@ -53,6 +55,12 @@ FixtureFinder.initializer = function() {
                 } else {
                     currentDateSelected = moment(currentDateSelected).add(daysToMillis(parseInt(offset)));
                 }
+                getFixturesForCurrentDate();
+            }
+        );
+        addListenerFor(datePicker, 'change',
+            function(){
+                currentDateSelected = moment(datePicker[0].value);
                 getFixturesForCurrentDate();
             }
         );
