@@ -36,7 +36,7 @@ describe("A FixtureParser", function() {
         it("will have the expected fixture data in the table", function() {
           expect($('.table .fixture .competition').text()).toEqual("FA Cup");
           expect($('.table .fixture .home').text()).toEqual("Manchester United");
-          expect($('.table .fixture .kickOffDate').text()).toEqual("01:00");
+          expect($('.table .fixture .kickOffDate').text()).toEqual("05:30");
           expect($('.table .fixture .score').text()).toEqual("1:2");
           expect($('.table .fixture .away').text()).toEqual("Arsenal");
         });

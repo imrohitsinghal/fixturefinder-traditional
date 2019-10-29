@@ -26,7 +26,7 @@ describe("The FixtureFinder team filter", function() {
     it("will return the the fixtures with Ar", function() {      
         var filtered = FixtureFinder.filterTeams("Ar")(testFixtures);
      
-        expect(filtered).toEqual([testFixtures[0], testFixtures[1], testFixtures[2]]);
+        expect(filtered).toEqual([testFixtures[0], testFixtures[1]]);
     });
   });
 
@@ -34,7 +34,7 @@ describe("The FixtureFinder team filter", function() {
     it("will return the the fixtures with ", function() {      
         var filtered = FixtureFinder.filterTeams("Arl")(testFixtures);
      
-        expect(filtered).toEqual([testFixtures[1], testFixtures[2]]);
+        expect(filtered).toEqual([testFixtures[1]]);
     });
   });
 });
