@@ -2,6 +2,7 @@ String.prototype.contains = function(it) {
     return this.indexOf(it) != -1;
 };
 
+
 var FixtureParser = function() {
     var getLocalKickOffTime = function(date, utcTime) {
         if (utcTime.indexOf(":") > -1) {
@@ -14,7 +15,9 @@ var FixtureParser = function() {
     };
 
     function showHomeTeamDetails(team_name) {
-        var url = 'http://fixturefinder-service.herokuapp.com/fixture-finder/fixtures/by-team/'+team_name;
+        import urls  from 'config'
+        var url = urls.prod.byteam +team_name;
+        // var url = urls.mock.byteam;
         $('.spinner').fadeIn(1000);
         $.ajax({
             type: 'GET',

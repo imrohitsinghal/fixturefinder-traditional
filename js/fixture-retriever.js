@@ -1,3 +1,5 @@
+import urls  from 'config'
+
 var FixtureRetriever = function() {
 
     var clearOldData = function() {
@@ -11,7 +13,8 @@ var FixtureRetriever = function() {
             FixtureParser.parseFixtures(filter(fixtures));
         },
         getFixturesByDate: function(date, filter){
-            var url = 'http://fixturefinder-service.herokuapp.com/fixture-finder/fixtures/'+date+'?callback=?';
+            var url = urls.prod.fixtures +date+'?callback=?';
+            // var url = urls.mock.fixtures;
             $('.spinner').fadeIn(1000);
 
             FixtureFinder.setDateWithCurrentLanguage(date, FixtureFinder.currentLanguage);

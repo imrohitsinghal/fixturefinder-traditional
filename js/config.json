@@ -1,0 +1,11 @@
+{
+  "prod": {
+    "fixtures": "http://fixturefinder-service.herokuapp.com/fixture-finder/fixtures/",
+    "byteam": "http://fixturefinder-service.herokuapp.com/fixture-finder/fixtures/by-team/"
+  },
+
+  "mock": {
+    "fixtures": "https://825f5e68-3f17-4cff-b097-99443d895f95.mock.pstmn.io/fixtures/",
+    "byteam": "https://825f5e68-3f17-4cff-b097-99443d895f95.mock.pstmn.io/fixtures/by-team/"
+  }
+}
